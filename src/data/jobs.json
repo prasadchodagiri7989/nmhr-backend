@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Experienced Carpenter",
+    "company": "Creative Woodworks",
+    "location": "Abu Dhabi, UAE",
+    "jobType": "full-time",
+    "description": "Join our residential and commercial carpentry projects. Skilled in woodworking and blueprint reading required.",
+    "shortDescription": "Skilled carpenter needed for ongoing projects.",
+    "salary": "AED 90 - 130 per hour",
+    "tags": ["Carpentry", "Construction", "Woodworking"],
+    "postedBy": "6651dcdc4c12ef39bc88e981",
+    "isActive": true
+  },
+  {
+    "title": "House Painter",
+    "company": "Premium Painting Co.",
+    "location": "Dubai, UAE",
+    "jobType": "part-time",
+    "description": "Interior and exterior painting for residential buildings. Must know paint types and safety protocols.",
+    "shortDescription": "Painter for interior & exterior jobs.",
+    "salary": "AED 80 - 100 per hour",
+    "tags": ["Painting", "Residential", "Safety"],
+    "postedBy": "6651dcdc4c12ef39bc88e981",
+    "isActive": true
+  },
+  {
+    "title": "HVAC Technician",
+    "company": "Cool Comfort Systems",
+    "location": "Sharjah, UAE",
+    "jobType": "contract",
+    "description": "Maintain, install, and repair HVAC systems in residential and commercial buildings.",
+    "shortDescription": "HVAC expert needed for maintenance and install work.",
+    "salary": "AED 100 - 140 per hour",
+    "tags": ["HVAC", "Air Conditioning", "Maintenance"],
+    "postedBy": "6651dcdc4c12ef39bc88e981",
+    "isActive": true
+  },
+  {
+    "title": "Electrician",
+    "company": "Bright Spark Electricals",
+    "location": "Abu Dhabi, UAE",
+    "jobType": "full-time",
+    "description": "Licensed electrician with experience in wiring, lighting, and panels for commercial buildings.",
+    "shortDescription": "Experienced commercial electrician needed.",
+    "salary": "AED 110 - 150 per hour",
+    "tags": ["Electrical", "Wiring", "Commercial"],
+    "postedBy": "6651dcdc4c12ef39bc88e981",
+    "isActive": true
+  },
+  {
+    "title": "Tile Setter",
+    "company": "Precision Tile & Stone",
+    "location": "Dubai, UAE",
+    "jobType": "full-time",
+    "description": "Install tiles on floors and walls. Must be precise and experienced with cutting tools.",
+    "shortDescription": "Tile setter for residential projects.",
+    "salary": "AED 85 - 120 per hour",
+    "tags": ["Tiling", "Construction", "Skilled Trade"],
+    "postedBy": "6651dcdc4c12ef39bc88e981",
+    "isActive": true
+  }
+]
