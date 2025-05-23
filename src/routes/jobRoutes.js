@@ -64,18 +64,22 @@ router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
 
+    // Delete the job
     const job = await Job.findByIdAndDelete(id);
-
     if (!job) {
       return res.status(404).json({ message: 'Job not found' });
     }
 
-    res.status(200).json({ message: 'Job deleted successfully', job });
+    // Delete all applications for this job
+    await Application.deleteMany({ jobId: id });
+
+    res.status(200).json({ message: 'Job and associated applications deleted successfully', job });
   } catch (error) {
     console.error("❌ Error deleting job:", error);
     res.status(500).json({ message: 'Server error', error: error.message });
   }
 });
+
 
 // PUT /api/jobs/:id — Update a job by ID
 router.put('/:id', async (req, res) => {
