@@ -1,2 +1,4 @@
 node_modules/
 .env
+# Secrets
+src/google-drive-key.json

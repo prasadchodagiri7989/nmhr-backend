@@ -41,4 +41,49 @@ router.post('/', async (req, res) => {
   }
 });
 
+router.get('/job/:jobId', async (req, res) => {
+  try {
+    const applications = await Application.find({ jobId: req.params.jobId });
+    res.status(200).json(applications);
+  } catch (err) {
+    console.error("Error fetching applications:", err);
+    res.status(500).json({ message: 'Failed to fetch applications' });
+  }
+});
+
+// @route   PUT /api/applications/:id
+// @desc    Update an application (e.g., status)
+router.put('/:id', async (req, res) => {
+  try {
+    const updatedApp = await Application.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+
+    if (!updatedApp) {
+      return res.status(404).json({ message: 'Application not found' });
+    }
+
+    res.status(200).json(updatedApp);
+  } catch (error) {
+    console.error('Error updating application:', error);
+    res.status(500).json({ message: 'Failed to update application' });
+  }
+});
+
+// @route   GET /api/applications
+// @desc    Get all applications (admin only)
+router.get('/', async (req, res) => {
+  try {
+    const applications = await Application.find();
+    res.status(200).json(applications);
+  } catch (error) {
+    console.error('Error fetching all applications:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
+
+
 export default router;
