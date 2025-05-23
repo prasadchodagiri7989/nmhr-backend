@@ -12,10 +12,13 @@ const __dirname = dirname(__filename);
 const router = express.Router();
 
 // Google Drive Auth Setup
+const serviceAccount = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON || "{}");
+
 const auth = new google.auth.GoogleAuth({
-  keyFile: path.join(__dirname, '../google-drive-key.json'),
+  credentials: serviceAccount,
   scopes: ['https://www.googleapis.com/auth/drive'],
 });
+
 const drive = google.drive({ version: 'v3', auth });
 
 // Multer setup (temporary upload to ./uploads/)
