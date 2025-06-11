@@ -17,7 +17,8 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:8081',            // for local development
   'https://nm-hr.vercel.app',
-  'https://nmhruae.com'        // your deployed frontend
+  'https://nmhruae.com',
+  'https://www.nmhruae.com'
 ];
 
 app.use(cors({
