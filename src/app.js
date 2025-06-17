@@ -15,7 +15,7 @@ import cors from 'cors';
 const app = express();
 // Allow requests from Vite frontend
 const allowedOrigins = [
-  'http://localhost:8081',            // for local development
+  'http://localhost:8080',
   'https://nm-hr.vercel.app',
   'https://nmhruae.com',
   'https://www.nmhruae.com'

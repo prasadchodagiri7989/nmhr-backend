@@ -16,6 +16,27 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// @route   PUT /api/users/:id
+// @desc    Update user profile
+router.put('/:id', async (req, res) => {
+  try {
+    const updates = req.body;
+
+    // Ensure user exists
+    const user = await User.findById(req.params.id);
+    if (!user) return res.status(404).json({ message: 'User not found' });
+
+    // Update fields
+    Object.assign(user, updates);
+    const updatedUser = await user.save();
+
+    res.json(updatedUser);
+  } catch (error) {
+    res.status(500).json({ message: 'Error updating user', error: error.message });
+  }
+});
+
+
 router.get("/admin/users", async (req, res) => {
   try {
     const users = await User.find().sort({ createdAt: -1 });
