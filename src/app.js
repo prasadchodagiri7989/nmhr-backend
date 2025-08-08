@@ -28,6 +28,10 @@ app.use(cors({
 connectDB();
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('hello world');
+});
+
 app.use('/uploads', express.static('uploads'));
 app.use('/api/auth', authRoutes);
 app.use('/api/jobs', jobRoutes);
